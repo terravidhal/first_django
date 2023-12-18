@@ -17,7 +17,8 @@ def create(request):
     return redirect("/")
 
 def show(request, number):
-    return HttpResponse("placeholder to display blog number: " + str(number))
+    return HttpResponse(f"Placeholer to display blog number :  {number}")
+    #return HttpResponse("placeholder to display blog number: " + str(number))
 
 def edit(request, number):
     return HttpResponse("placeholder to edit blog "+  str(number))
@@ -26,7 +27,7 @@ def destroy(request, number):
     return redirect("/blogs")
 
 def json_method(request):
-    return JsonResponse({"response": "JSON response from redirected_method", "status": True})
+    return JsonResponse({'title': 'my first blog', 'content': 'Started full stack Django'})
 
 
 
